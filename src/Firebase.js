@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app"
 import { getFirestore } from "firebase/firestore"
+import {getAuth} from "firebase/auth"
 const firebaseConfig = {
     apiKey: "AIzaSyA07bUq2a2IRqtcRvSjbPiRDSRY0Sf_1Oc",
     authDomain: "linkdein-clone-618f6.firebaseapp.com",
@@ -10,6 +11,6 @@ const firebaseConfig = {
   }
   const firebaseApp = initializeApp(firebaseConfig);
   const db = getFirestore(firebaseApp);
-//   const auth = firebase.auth()
+ const auth = getAuth()
 
-  export {db};
+  export {db, auth};
